@@ -1,10 +1,10 @@
 class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
-        insertPos = 0
+    def moveZeroes(self, nums):
+        index = 0  
         for i in range(len(nums)):
             if nums[i] != 0:
-                nums[insertPos] = nums[i]
-                insertPos += 1
-        while insertPos < len(nums):
-            nums[insertPos] = 0
-            insertPos += 1
+                nums[index] = nums[i]
+                index += 1
+        while index < len(nums):
+            nums[index] = 0
+            index += 1
